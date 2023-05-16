@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8/ubi-minimal:8.7 AS java-builder
+FROM registry.access.redhat.com/ubi8/ubi-minimal:8.7 as java-builder
 LABEL maintainer="OpsMx"
 ARG JAVA_PACKAGE=java-1.8.0-openjdk-devel
 RUN microdnf update && microdnf install --setopt=tsflags=nodocs ${JAVA_PACKAGE}
