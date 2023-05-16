@@ -6,7 +6,7 @@ ENV server_port=8088i
 FROM java-builder
 COPY --from=java-builder /target/issuegen-0.1.jar /opt/issuegen-0.1.jar
 COPY --from=java-builder dockerrun.sh /usr/local/bin/dockerrun.sh
-RUN chmod +x /usr/local/bin/dockerrun.shi && \
+RUN chmod +x /usr/local/bin/dockerrun.sh && \
   rm -rf /var/log/*
 CMD ["dockerrun.sh"]
 
